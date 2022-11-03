@@ -43,7 +43,12 @@ function evenEven()
     $correctAnswer = 0;
     while ($correctAnswer < 3) {
         $questionInt = random_int(0, 1000);
-        $correctQuestion = $questionInt % 2 ? 'no' : 'yes';
+        $correctQuestion = $questionInt % 2;
+        if ($correctQuestion === 0) {
+            $correctQuestion = 'yes';
+        } else {
+            $correctQuestion = 'no';
+        }
         line("Question: %s!", $questionInt);
         $answer = prompt('Your answer: ');
         if ($correctQuestion === $answer) {
@@ -120,7 +125,7 @@ function evenPrime()
     resultGame($name, $answer, $correctQuestion, $correctAnswer);
 }
 
-function resultGame($name, $answer, $correctQuestion, $correctAnswer)
+function resultGame(string $name, string $answer, string $correctQuestion, string $correctAnswer)
 {
     if ($correctAnswer === 3) {
         line("Congratulations, %s!", $name);
@@ -130,7 +135,7 @@ function resultGame($name, $answer, $correctQuestion, $correctAnswer)
     }
 }
 
-function gcd($a, $b)
+function gcd(int $a, int $b)
 {
     while ($a != $b) {
         if ($a > $b) {
@@ -168,7 +173,7 @@ function progressionArray()
     return $progressionArray;
 }
 
-function checkPrimeInt($questionInt)
+function checkPrimeInt(int $questionInt)
 {
     for ($i = 2; $i < $questionInt; $i++) {
         $result = $questionInt % $i;
