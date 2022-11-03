@@ -146,11 +146,11 @@ function randomOperand()
 {
     $randomint = random_int(1, 3);
     if ($randomint === 1) {
-        $randomOperand = " + ";
+        $randomOperand = "+";
     } elseif ($randomint === 2) {
-        $randomOperand = " - ";
+        $randomOperand = "-";
     } else {
-        $randomOperand = " * ";
+        $randomOperand = "*";
     }
     return $randomOperand;
 }
