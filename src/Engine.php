@@ -56,6 +56,27 @@ function evenEven()
     resultGame($name, $answer, $correctQuestion, $correctAnswer);
 }
 
+function evenGcd()
+{
+    $name = welcome();
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $correctAnswer = 0;
+    while ($correctAnswer < 3) {
+        $questionIntFirst = random_int(0, 100);
+        $questionIntSecond = random_int(0, 100);
+        $correctQuestion = gcd($questionIntFirst, $questionIntSecond);
+        line("Question: %s %s!", $questionIntFirst, $questionIntSecond);
+        $answer = prompt('Your answer: ');
+        if ($correctQuestion == $answer) {
+            $correctAnswer++;
+            line("Correct!");
+        } else {
+            break;
+        }
+    }
+    resultGame($name, $answer, $correctQuestion, $correctAnswer);
+}
+
 function resultGame($name, $answer, $correctQuestion, $correctAnswer)
 {
     if ($correctAnswer === 3) {
@@ -64,6 +85,18 @@ function resultGame($name, $answer, $correctQuestion, $correctAnswer)
         line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctQuestion);
         line("Let's try again, %s!", $name);
     }
+}
+
+function gcd($a, $b)
+{
+    while ($a != $b) {
+        if ($a > $b) {
+            $a -= $b;
+        } else {
+            $b -= $a;
+        }
+    }
+    return $a;
 }
 
 function randomOperand()
