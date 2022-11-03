@@ -33,7 +33,7 @@ function evenCalc()
             break;
         }
     }
-    resultGame((string) $name,(string) $answer,(string) $correctQuestion,(string) $correctAnswer);
+    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
 }
 
 function evenEven()
@@ -58,7 +58,7 @@ function evenEven()
             break;
         }
     }
-    resultGame((string) $name,(string) $answer,(string) $correctQuestion,(string) $correctAnswer);
+    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
 }
 
 function evenGcd()
@@ -79,7 +79,7 @@ function evenGcd()
             break;
         }
     }
-    resultGame((string) $name,(string) $answer,(string) $correctQuestion,(string) $correctAnswer);
+    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
 }
 
 function evenProgression()
@@ -102,7 +102,7 @@ function evenProgression()
             break;
         }
     }
-    resultGame((string) $name,(string) $answer,(string) $correctQuestion,(string) $correctAnswer);
+    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
 }
 
 function evenPrime()
@@ -122,7 +122,7 @@ function evenPrime()
             break;
         }
     }
-    resultGame((string) $name,(string) $answer,(string) $correctQuestion,(string) $correctAnswer);
+    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
 }
 
 function resultGame(string $name, string $answer, string $correctQuestion, string $correctAnswer)
