@@ -59,7 +59,7 @@ function evenEven()
 function evenGcd()
 {
     $name = welcome();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line('Find the greatest common divisor of given numbers.');
     $correctAnswer = 0;
     while ($correctAnswer < 3) {
         $questionIntFirst = random_int(0, 100);
