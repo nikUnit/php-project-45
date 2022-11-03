@@ -100,6 +100,26 @@ function evenProgression()
     resultGame($name, $answer, $correctQuestion, $correctAnswer);
 }
 
+function evenPrime()
+{
+    $name = welcome();
+    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+    $correctAnswer = 0;
+    while ($correctAnswer < 3) {
+        $questionInt = random_int(2, 1000);
+        $correctQuestion = checkPrimeInt($questionInt);
+        line("Question: %s!", $questionInt);
+        $answer = prompt('Your answer: ');
+        if ($correctQuestion == $answer) {
+            $correctAnswer++;
+            line("Correct!");
+        } else {
+            break;
+        }
+    }
+    resultGame($name, $answer, $correctQuestion, $correctAnswer);
+}
+
 function resultGame($name, $answer, $correctQuestion, $correctAnswer)
 {
     if ($correctAnswer === 3) {
@@ -146,4 +166,15 @@ function progressionArray()
         $questionInt += $progressionInt;
     }
     return $progressionArray;
+}
+
+function checkPrimeInt($questionInt)
+{
+    for ($i = 2; $i < $questionInt; $i++) {
+        $result = $questionInt % $i;
+        if ($result === 0) {
+            return 'no';
+        }
+    }
+    return 'yes';
 }
