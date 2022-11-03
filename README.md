@@ -12,3 +12,6 @@ https://asciinema.org/a/choniUP2Lt98MBFPxNCXrrSOn
 
 ### Ascinema[brain-gcd]
 https://asciinema.org/a/9PSsxNwxi6E5v7sJ2yry8UoQ4
+
+### Ascinema[brain-progression]
+https://asciinema.org/a/luPfsfCOFs6DV3siCHeFSP26i

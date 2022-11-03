@@ -77,6 +77,29 @@ function evenGcd()
     resultGame($name, $answer, $correctQuestion, $correctAnswer);
 }
 
+function evenProgression()
+{
+    $name = welcome();
+    line('What number is missing in the progression?');
+    $correctAnswer = 0;
+    while ($correctAnswer < 3) {
+        $progressionArray = progressionArray();
+        $randomInt = array_rand($progressionArray);
+        $correctQuestion = $progressionArray[$randomInt];
+        $progressionArray[$randomInt] = '..';
+        $questionInt = implode(' ', $progressionArray);
+        line("Question: %s!", $questionInt);
+        $answer = prompt('Your answer: ');
+        if ($correctQuestion == $answer) {
+            $correctAnswer++;
+            line("Correct!");
+        } else {
+            break;
+        }
+    }
+    resultGame($name, $answer, $correctQuestion, $correctAnswer);
+}
+
 function resultGame($name, $answer, $correctQuestion, $correctAnswer)
 {
     if ($correctAnswer === 3) {
@@ -110,4 +133,17 @@ function randomOperand()
         $randomOperand = " * ";
     }
     return $randomOperand;
+}
+
+function progressionArray()
+{
+    $questionInt = random_int(0, 100);
+    $progressionInt = random_int(2, 10);
+    $progressionLength = random_int(6, 10);
+    $progressionArray = [];
+    for ($i = 0; $i < $progressionLength; $i++) {
+        $progressionArray[] = $questionInt;
+        $questionInt += $progressionInt;
+    }
+    return $progressionArray;
 }
