@@ -51,7 +51,7 @@ function evenEven()
         }
         line("Question: %s!", $questionInt);
         $answer = prompt('Your answer: ');
-        if ($correctQuestion === $answer) {
+        if ($correctQuestion == $answer) {
             $correctAnswer++;
             line("Correct!");
         } else {
@@ -127,7 +127,7 @@ function evenPrime()
 
 function resultGame(string $name, string $answer, string $correctQuestion, string $correctAnswer)
 {
-    if ($correctAnswer === 3) {
+    if ($correctAnswer == 3) {
         line("Congratulations, %s!", $name);
     } else {
         line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctQuestion);
