@@ -33,7 +33,7 @@ function evenCalc()
             break;
         }
     }
-    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
+    resultGame($name, $answer, (string) $correctQuestion, $correctAnswer);
 }
 
 function evenEven()
@@ -58,7 +58,7 @@ function evenEven()
             break;
         }
     }
-    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
+    resultGame($name, $answer, $correctQuestion, $correctAnswer);
 }
 
 function evenGcd()
@@ -79,7 +79,7 @@ function evenGcd()
             break;
         }
     }
-    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
+    resultGame($name, (string) $answer, (string) $correctQuestion, $correctAnswer);
 }
 
 function evenProgression()
@@ -102,7 +102,7 @@ function evenProgression()
             break;
         }
     }
-    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
+    resultGame($name, (string) $answer, (string) $correctQuestion, $correctAnswer);
 }
 
 function evenPrime()
@@ -122,10 +122,10 @@ function evenPrime()
             break;
         }
     }
-    resultGame((string) $name, (string) $answer, (string) $correctQuestion, (string) $correctAnswer);
+    resultGame($name, (string) $answer, (string) $correctQuestion, $correctAnswer);
 }
 
-function resultGame(string $name, string $answer, string $correctQuestion, string $correctAnswer)
+function resultGame(string $name, string $answer, string $correctQuestion, int $correctAnswer)
 {
     if ($correctAnswer == 3) {
         line("Congratulations, %s!", $name);
